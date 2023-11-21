@@ -5,6 +5,8 @@ Gura is a file format for configuration files. Gura is as flexible as YAML and s
 
 To learn more about Gura, you can read the [Official Gura Documentation](https://gura.netlify.app/docs/gura).
 
+This Gura implementation in Nim emphasizes code that is easy to write and read (NPeg is used in both lexing and parsing), rather than optimizing for execution speed.
+
 ## Examples
 ```nim
 import gura, json, strutils
@@ -44,6 +46,21 @@ echo "Title -> ", node["title"]
 echo "My username is ", node["person"]["username"]
 for host in node["hosts"]:
   echo "Host -> ", host
+```
+
+## Usage
+```nim
+  proc fromGura(input: string): JsonNode
+    ## Transforms a Gura string into a JsonNode.
+
+  proc fromGuraFile(path: string): JsonNode
+    ## Transforms a Gura file into a JsonNode.
+
+  proc toGura(node: JsonNode; indent: Positive = 4): string
+    ## Transforms a JsonNode into Gura string.
+
+  proc toGuraFile(node: JsonNode; path: string; indent: Positive = 4)
+    ## Transforms a JsonNode into Gura file.
 ```
 
 ## Differences from the original Gura

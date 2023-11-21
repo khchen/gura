@@ -444,11 +444,13 @@ proc toGura(node: JsonNode, output: var string, indent: int, count = 4) =
           toGura(val, output, indent, count)
 
 proc fromGura*(input: string): JsonNode =
+  ## Transforms a Gura string into a JsonNode.
   var state = initGuraState()
   state.lex(input)
   return state.parse()
 
 proc toGura*(node: JsonNode, indent: Positive = 4): string =
+  ## Transforms a JsonNode into Gura string.
   if node.kind != JObject:
     raise newException(GuraError, "not an object")
 
@@ -458,10 +460,12 @@ proc toGura*(node: JsonNode, indent: Positive = 4): string =
   toGura(node, result, 0, indent)
 
 proc fromGuraFile*(path: string): JsonNode =
+  ## Transforms a Gura file into a JsonNode.
   let fullname = expandFilename(path)
   return fromGura("import " & escapeJson(fullname))
 
 proc toGuraFile*(node: JsonNode, path: string, indent: Positive = 4) =
+  ## Transforms a JsonNode into Gura file.
   writeFile(path, node.toGura(indent))
 
 when isMainModule:
