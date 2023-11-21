@@ -1,0 +1,2 @@
+# Should be interpreted as \t\\h\\i\\i
+foo: "\t\h\i\\i"

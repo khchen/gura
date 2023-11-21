@@ -1,0 +1,72 @@
+# Error reporting tests
+
+This folder contains several Gura files that return different types of errors. **Their purpose is to check that the line and global position of the Gura text where the error occurs is correctly reported in the implementations**.
+
+The name of the file indicates which type of error is returned. The line and position for each of the files are listed below:
+
+- `duplicated_key_error_1.ura`:
+	- Line: 2
+	- Global position: 11
+- `duplicated_key_error_2.ura`:
+	- Line: 3
+	- Global position: 21
+- `duplicated_key_error_3.ura`:
+	- Line: 4
+	- Global position: 37
+- `duplicated_variable_error_1.ura`:
+	- Line: 2
+	- Global position: 12
+- `duplicated_variable_error_2.ura`:
+	- Line: 3
+	- Global position: 25
+- `duplicated_variable_error_3.ura`:
+	- Line: 6
+	- Global position: 37
+- `importing_error_1.ura`:
+	- Line: 2
+	- Global position: 74
+- `importing_error_2.ura`:
+	- Line: 5
+	- Global position: 86
+- `indentation_error_1.ura`:
+	- Line: 3
+	- Global position: 20
+- `indentation_error_2.ura`:
+	- Line: 3
+	- Global position: 19
+- `indentation_error_3.ura`:
+	- Line: 3
+	- Global position: 18
+- `indentation_error_4.ura`:
+	- Line: 3
+	- Global position: 26
+- `missing_variable_error_1.ura`:
+	- Line: 1
+	- Global position: 5
+- `missing_variable_error_2.ura`:
+	- Line: 2
+	- Global position: 19
+- `missing_variable_error_3.ura`:
+	- Line: 7
+	- Global position: 33
+- `missing_variable_error_4.ura`:
+	- Line: 1
+	- Global position: 17
+- `missing_variable_error_5.ura`:
+	- Line: 2
+	- Global position: 24
+- `missing_variable_error_6.ura`:
+	- Line: 1
+	- Global position: 21
+- `parsing_error_1.ura`:
+	- Line: 1
+	- Global position: 0
+- `parsing_error_2.ura`:
+	- Line: 1
+	- Global position: 10
+- `parsing_error_3.ura`:
+	- Line: 2
+	- Global position: 42 
+- `parsing_error_4.ura`:
+	- Line: 6
+	- Global position: 45
