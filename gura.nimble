@@ -6,7 +6,7 @@
 #====================================================================
 
 # Package
-version       = "0.1.0"
+version       = "0.1.1"
 author        = "Ward"
 description   = "Gura Configuration Language for Nim"
 license       = "MIT"
@@ -14,4 +14,4 @@ skipDirs      = @["testing"]
 skipFiles     = @["tests.nim"]
 
 # Dependencies
-requires "npeg#head"
+requires "npeg >= 1.2.2"
